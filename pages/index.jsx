@@ -4,7 +4,7 @@ import Searchbar from "../components/Searchbar";
 import Pokedex from "../components/Pokedex";
 import { FavoriteProvider } from "../contexts/favoritesContext";
 import algoliasearch from "algoliasearch/lite";
-import { InstantSearch } from "react-instantsearch-dom";
+import { Configure, InstantSearch } from "react-instantsearch-dom";
 
 const { useState, useEffect } = React;
 
@@ -41,6 +41,7 @@ const Home = () => {
 
   return (
     <InstantSearch searchClient={searchClient} indexName="dev_POKEDEX">
+      <Configure hitsPerPage={24}/>
       <FavoriteProvider
         value={{
           favoritePokemons: favorites,
