@@ -20,7 +20,7 @@ const Pokemon = (props) => {
     <div className="pokemon-card">
       <div className="pokemon-img-container">
         <img
-          src={pokemon?.sprite}
+          src={pokemon?.thumbnail}
           alt={pokemon?.name.english}
           className="pokemon-img"
         />
