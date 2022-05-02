@@ -9,7 +9,7 @@ const { useState, useEffect } = React;
 
 const localStorageKey = "favorite_pokemon";
 
-const Home: NextPage = () => {
+const Home = () => {
   const [pokemons, setPokemons] = useState([]);
   const [page, setPage] = useState(0);
   const [total, setTotal] = useState(0);
