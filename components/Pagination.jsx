@@ -5,7 +5,7 @@ import { connectPagination } from "react-instantsearch-dom";
 const Pagination = (props) => {
   const { refine, nbPages, currentRefinement } = props;
   const onLeftArrow = () =>
-    currentRefinement > 0 ? refine(currentRefinement - 1) : () => {};
+    currentRefinement > 1 ? refine(currentRefinement - 1) : () => {};
   const onRightArrow = () =>
     currentRefinement <= nbPages - 1 ? refine(currentRefinement + 1) : () => {};
   return (
